@@ -1,0 +1,25 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:public/css",
+    "sass-watch": "sass --watch src/scss:public/css",
+    "build": "webpack --config webpack.dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "css-loader": "^7.1.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.76.0",
+    "sass-loader": "^14.2.1",
+    "watch": "^1.0.2",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
