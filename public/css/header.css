@@ -92,7 +92,8 @@ header {
   position: relative;
   z-index: 9;
   line-height: 1;
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
+  margin: 0 20px;
 }
 
 .g-nav__li:last-child {
@@ -541,6 +542,7 @@ html.active body:before {
   }
   .hd__flex {
     align-items: center;
+    justify-content: space-between;
   }
   .hd__logo {
     width: 80px;

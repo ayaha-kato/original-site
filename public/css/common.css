@@ -127,6 +127,10 @@ button:focus {
   outline: 0;
 }
 
+section{
+  height: auto !important;
+}
+
 /*============================
     module style
 ============================*/

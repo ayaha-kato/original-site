@@ -135,11 +135,23 @@ html.active {
 	kv
 ============================*/
 
-/* .kv__img img {
-    object-fit: cover;
-    width: 100%;
-    height: calc(100vh - 110px);
-} */
+.slide-show {
+  width: 100%;
+  height: 240px;
+  position: relative;
+}
+
+.slide-show_panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .kv__copy {
   position: absolute;
@@ -202,8 +214,6 @@ html.active {
 .slick-dots {
   left: -33%;
   bottom: 10px;
-  /* left: -25%;
-	bottom: 20%; */
   z-index: 99;
 }
 
@@ -211,18 +221,6 @@ html.active {
   width: 30px;
 }
 
-/* .slick-dots li button:before {
-	content: "●";
-	width: 7px;
-	height: 7px;
-	font-size: 10px;
-	color: #ddd;
-	opacity: 0.8;
-}
-
-.slick-dots li.slick-active button:before {
-	color: #3b0e2b;
-} */
 
 /* スライド slick fade*/
 
@@ -392,6 +390,10 @@ html.active {
   margin-bottom: 50px;
   text-align: center;
   font-weight: 600;
+  .-jp{
+    display: block;
+    font-size: 12px;
+  }
 }
 
 .top__txt {
@@ -614,25 +616,92 @@ html.active {
   padding: 80px 0;
   background: url(../img/top/works_bg.png) no-repeat center center;
   background-size: cover;
+  .top__ttl {
+    // max-width: 280px;
+    // width: 25%;
+    position: relative;
+    z-index: 20;
+    // margin-top: 200px;
+    // margin-right: 100px;
+  }
+    &.section {
+      width: 100%;
+      padding: 100px 0;
+    }
+  
+    /* 横スクロールセクション */
+    &.side-scroll {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .container {
+      width: 80%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  
+    .heading {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+  
+    /* タイトル */
+    .title {
+      padding: 200px 0 20px;
+      font-size: 52px;
+      text-align: center;
+    }
+  
+    /* 普通のセクション */
+    .normal-text {
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      margin-top: 60px;
+    }
+
+    .side-scroll-heading {
+      color: #eeebdd;
+    }
+  
+    .side-scroll-list-wrapper {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+  
+    .side-scroll-list {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      display: flex;
+      gap: 0 60px;
+    }
+  
+    .side-scroll-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 420px;
+      background-color: #eeebdd;
+      color: #1b1717;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  
+    .side-scroll-item+.side-scroll-item {
+      margin-left: 60px;
+    }
 }
 
-.works .top__ttl {
-  max-width: 280px;
-  width: 25%;
-  position: relative;
-  z-index: 20;
-  margin-top: 200px;
-  margin-right: 100px;
-}
 
-.works .works_list li {
-  margin-right: 20px;
-}
 
-.works .works_list_box {
-  max-width: 100%;
-  width: 100%;
-}
+
+
 
 @media screen and (max-width: 1040px) {}
 
